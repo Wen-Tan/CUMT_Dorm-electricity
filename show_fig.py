@@ -27,7 +27,7 @@ now_elec = now[1] - now[2]
 # 按时间重采样为逐小时数据，并计算差值
 df_all = df_all.resample('1H', axis=0).mean()
 df_all = df_all.diff(-1).dropna()
-df_all.columns = ['charging', 'using']
+df_all.columns = ['charging', 'using','']
 
 # 用 plotly 显示图表
 fig = px.bar(df_all, title=f'截至 {now[3]}，还剩 {now_elec} 度电')
