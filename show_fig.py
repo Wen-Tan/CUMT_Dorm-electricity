@@ -31,4 +31,4 @@ df_all.columns = ['charging', 'using','']
 
 # 用 plotly 显示图表
 fig = px.bar(df_all, title=f'截至 {now[3]}，还剩 {now_elec} 度电')
-fig.write_html('fig.html')
+fig.write_html('index.html')
