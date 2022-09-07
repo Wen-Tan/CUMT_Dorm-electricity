@@ -19,6 +19,8 @@ jobs:
       run: |
         cd dorm_elec
         python dorm_elec.py
+        cd ..
+        python show_fig.py
     - name: Commit changes
       run: |
         git config --global user.email BOT@github.com
